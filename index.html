@@ -20,12 +20,11 @@
 
   <script>
     $('button').click(function () {
-        if (navigator.onLine === true) {
-          location.href = './pages/onlineJudgment.html';
-        } else {
-          location.href = './pages/menue.html';
-        }
-      });
+      location.href = './pages/onlineJudgment.html';
+      if (navigator.onLine === false) {
+        location.href = './pages/menue.html';
+      }
+    });
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').then(registration => {
