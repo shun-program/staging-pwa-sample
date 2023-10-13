@@ -19,13 +19,12 @@
   <button class="btn offline" onclick="location.href='./pages/menue.html'">ログイン</button> -->
 
   <script>
-     $('button').on('click', '.add', function () {
-      const isOnline = navigator.onLine;
-      if (isOnline === true) {
-         $('button').attr("onclick","location.href='./pages/onlineJudgment.html'");
-       } else {
-          $('button').attr("onclick", "location.href='./pages/menue.html'");
-       }
+    $('button').click(function () {
+        if (navigator.onLine === true) {
+          location.href = './pages/onlineJudgment.html';
+        } else {
+          location.href = './pages/menue.html';
+        }
       });
 
     if ('serviceWorker' in navigator) {
