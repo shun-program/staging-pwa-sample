@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+.main-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.news {
+  list-style-type: none;
+  border-top: 1px solid #ccc;
+  padding: 0;
+}
+
+.item {
+  margin: 20px;
+}
+
+.btn,
+button.btn {
+  width: 15em;
+  height: 3em;
+  color: #000000;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.btn:hover,
+button.btn:hover {
+  color: #fff;
+  background: #4db56a;
+}
