@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PWA Sample</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/script.js"></script>
+  
+</head>
+
+<body>
+  <h1 class="main-title">PWA Sample</h1>
+  <button class="btn online" onclick="location.href='./pages/onlineJudgment.html'">ログイン</button>
+  <button class="btn offline" onclick="location.href='./pages/menue.html'">ログイン</button>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./js/sw.js').then(registration => {
+      console.log('ServiceWorker registration successful.');
+    }).catch(err => {
+      console.log('ServiceWorker registration failed.');
+    });
+      }
+  </script>
+</body>
+
+
+</html>
