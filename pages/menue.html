@@ -13,6 +13,7 @@
 
 <body>
   <h1 class="main-title">PWA Sample</h1>
+  <p> 前ページ接続状況： <span id="status"></span></p>
   <ul class="news">
     <li class="item">
         <button class="btn online" onclick="location.href='./a.html'">定期XX</button>
@@ -26,6 +27,15 @@
       <button class="btn" onclick="location.href='./c.html'">任意自己XX</button>
     </li>
   </ul>
+
+    <script>
+      var value = localStorage.getItem('isOnline');
+      if (value == 'true') {
+        document.getElementById('status').innerHTML = "オンライン";
+      } else {
+        document.getElementById('status').innerHTML = "オフライン";
+      };
+    </script>
 
 </body>
 

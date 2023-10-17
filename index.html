@@ -20,7 +20,8 @@
 
   <!-- オフライン時 -->
   <div class="load_offline">
-    <ul class="news">
+    <button class="btn" onclick="location.href='./pages/menue.html'">ログイン</button>
+    <!-- <ul class="news">
       <li class="item">
         <button class="btn online" onclick="location.href='./pages/a.html'">定期XX</button>
         <button class="btn offline" onclick="location.href='./pages/d.html'">定期XX(オフライン)</button>
@@ -32,11 +33,10 @@
       <li class="item">
         <button class="btn" onclick="location.href='./pages/c.html'">任意自己XX</button>
       </li>
-    </ul>
+    </ul> -->
   </div>
 
   <script>
-    doReload;
     isOnline = navigator.onLine;
       if (isOnline === true) {
         $(".load_offline").hide();
@@ -44,16 +44,8 @@
         $(".load_online").hide();
       };
 
-      //その１：関数を使うパターン
-        localStorage.setItem('isOnline', isOnline);
-
-    // $('button').click(function () {
-    //   if(navigator.onLine === true) {
-    //     location.href = './pages/onlineJudgment.html';
-    //   }else {
-    //     location.href = './pages/menue.html';
-    //   }
-    // });
+      //ローカルストレージに保存
+      localStorage.setItem('isOnline', isOnline);
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').then(registration => {

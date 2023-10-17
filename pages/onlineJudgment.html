@@ -10,15 +10,5 @@
 </head>
 <body>
   <button class="btn" onclick="location.href='./menue.html'">オンライン認証</button>
-  <p> 接続状況： <span id="input"></span></p>
-
-  <script>
-    var value = localStorage.getItem('isOnline');
-    if(value === true){
-      document.getElementById('input').innerHTML = "オンライン";
-    }else {
-      document.getElementById('input').innerHTML = "offline";
-    };
-  </script>
 </body>
 </html>
