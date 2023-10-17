@@ -5,3 +5,10 @@ $(function() {
     $(".online").hide();
   }
 });
+
+
+function doReload() {
+
+        // reloadメソッドによりページをリロード
+        window.location.reload();
+      }
