@@ -10,17 +10,19 @@
   <script src="./js/jquery-3.7.1.min.js"></script>
   <script src="./js/script.js"></script>
   <script type="text/javascript">
-    window.onload = onLoad;
+    window.location.reload(true);
 
-      function onLoad() {
-        let isOnline = true;
-        isOnline = navigator.onLine;
-        if (isOnline === true) {
-          $(".load_offline").hide();
-        } else {
-          $(".load_online").hide();
-        };
-      }
+    // window.onload = onLoad;
+
+    //   function onLoad() {
+    //     let isOnline = true;
+    //     isOnline = navigator.onLine;
+    //     if (isOnline === true) {
+    //       $(".load_offline").hide();
+    //     } else {
+    //       $(".load_online").hide();
+    //     };
+    //   }
     
   </script>
 </head>
