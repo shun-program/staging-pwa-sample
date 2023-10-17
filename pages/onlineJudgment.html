@@ -10,5 +10,12 @@
 </head>
 <body>
   <button class="btn" onclick="location.href='./menue.html'">オンライン認証</button>
+
+  <script>
+    let isOnline = navigator.onLine;
+    //ローカルストレージに保存
+    localStorage.setItem('isOnline', isOnline);
+  </script>
+  
 </body>
 </html>
